@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <title>Editor Test</title>
+<link rel="stylesheet" href="css/pure-0.6.0/base-min.css">
 <link rel="stylesheet" href="css/pure-0.6.0/pure.min.css">
 <link rel="stylesheet" href="css/pure-0.6.0/grids-responsive-min.css">
 <style type="text/css" media="screen">
@@ -14,26 +15,41 @@
         padding: 1em;
     }
 	.view {
-		width: 100%;
 		height: 200px;
 	}
 
 	.dev {
-		width: 80%;
 		height: 500px;
 	}
 
+	#gloutput {
+		background-color: #dff;
+	}
 	#editor {
 		font-size: 14px;
 		height: 300px;
 		border: solid 1px #000;
 	}
+	.marked {
+		background-color: #f00;
+	}
+	.console {
+		background-color: #ddd;
+		height: 100px;
+	}
 </style>
 </head>
 <body>
 
-<div class="view">
-	blah
+<div class="pure-g">
+	<div class="pure-u-1-2">
+		<canvas id="gloutput" class="pure-u-1-1" width=640 height=480></canvas>
+	</div>
+	<div class="pure-u-1-2">
+		<div class="console">
+			<pre>alsdfalsjdl</pre>
+		</div>
+	</div>
 </div>
 
 <div class="dev">
