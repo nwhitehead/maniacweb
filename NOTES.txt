@@ -1,0 +1,12 @@
+Browsers need to be served the files, otherwise won't work due
+to security policies.
+
+Do this from web/ directory:
+
+python -m SimpleHTTPServer
+
+Then open browser to localhost:8000 or whatever.
+
+--
+starlight js file must be named "starlight.js" because of script DOM
+check, that's why it's in a directory with the full name I wanted to use.

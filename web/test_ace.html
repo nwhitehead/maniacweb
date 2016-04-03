@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Editor Test</title>
+<link rel="stylesheet" href="css/pure-0.6.0/pure.min.css">
+<link rel="stylesheet" href="css/pure-0.6.0/grids-responsive-min.css">
+<style type="text/css" media="screen">
+    .pure-g > div {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .l-box {
+        padding: 1em;
+    }
+	.view {
+		width: 100%;
+		height: 200px;
+	}
+
+	.dev {
+		width: 80%;
+		height: 500px;
+	}
+
+	#editor {
+		font-size: 14px;
+		height: 300px;
+		border: solid 1px #000;
+	}
+</style>
+</head>
+<body>
+
+<div class="view">
+	blah
+</div>
+
+<div class="dev">
+	<div id="editor">local inspect = require('inspect')
+	local v = {x=5, y={}}
+	print(inspect(v))
+	</div>
+</div>
+
+
+<script src="/js/ace/ace-src-min-noconflict.js"></script>
+<script src="/js/ace/theme-chrome.js"></script>
+<script src="/js/ace/theme-textmate.js"></script>
+<script src="/js/ace/mode-lua.js"></script>
+<script>
+	var editor =  ace.edit("editor");
+	editor.setTheme("ace/theme/chrome");
+	editor.getSession().setMode("ace/mode/lua");
+</script>
+</body>
+</html>
