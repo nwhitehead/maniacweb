@@ -72,8 +72,18 @@
 	var editor =  ace.edit("editor");
 	editor.setTheme("ace/theme/chrome");
 	editor.getSession().setMode("ace/mode/lua");
-
-	var console = Console.create('terminal-container');
+	var version = "0.0.1";
+	var msg = 
+		"\x1b[35;1mManiacWebSDK Console\r\n" +
+		"\x1b[0;35m~~~~~~~~~~~~~~~~~~~~\x1b[0m\r\n" +
+		"\x1b[0;35mCopyright 2016 Nathan Whitehead and others\r\n\r\n";
+	var console = Console.create('terminal-container', {
+		banner: msg,
+		responder: function (input, term) {
+			var resp = input + "\r\n";
+			term.write(resp);
+		},
+	});
 
 
 </script>
