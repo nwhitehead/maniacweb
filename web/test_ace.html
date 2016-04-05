@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <title>Editor Test</title>
-<link rel="stylesheet" href="css/pure-0.6.0/base-min.css">
-<link rel="stylesheet" href="css/pure-0.6.0/pure.min.css">
-<link rel="stylesheet" href="css/pure-0.6.0/grids-responsive-min.css">
+<link rel="stylesheet" href="external/pure-0.6.0/base-min.css" />
+<link rel="stylesheet" href="external/pure-0.6.0/pure.min.css" />
+<link rel="stylesheet" href="external/pure-0.6.0/grids-responsive-min.css" />
+<link rel="stylesheet" href="external/xterm.js/xterm.css" />
 <style type="text/css" media="screen">
     .pure-g > div {
         -webkit-box-sizing: border-box;
@@ -18,10 +19,6 @@
 		height: 200px;
 	}
 
-	.dev {
-		height: 500px;
-	}
-
 	#gloutput {
 		background-color: #dff;
 	}
@@ -33,21 +30,24 @@
 	.marked {
 		background-color: #f00;
 	}
-	.console {
-		background-color: #ddd;
-		height: 100px;
+	#terminal-container {
+		background-color: #111;
+		color: #fafafa;
+		font-size: 85%;
+		height: 250px;
 	}
 </style>
+<script src="external/xterm.js/xterm.js"></script>
+<script src="external/xterm.js/fit.js"></script>
 </head>
 <body>
 
-<div class="pure-g">
+<div class="pure-g" style="height:300px;">
 	<div class="pure-u-1-2">
 		<canvas id="gloutput" class="pure-u-1-1" width=640 height=480></canvas>
 	</div>
 	<div class="pure-u-1-2">
-		<div class="console">
-			<pre>alsdfalsjdl</pre>
+		<div id="terminal-container">
 		</div>
 	</div>
 </div>
@@ -59,15 +59,23 @@
 	</div>
 </div>
 
+<div>
+	<a class="pure-button">Button</a>
+</div>
 
-<script src="/js/ace/ace-src-min-noconflict.js"></script>
-<script src="/js/ace/theme-chrome.js"></script>
-<script src="/js/ace/theme-textmate.js"></script>
-<script src="/js/ace/mode-lua.js"></script>
+<script src="external/ace/ace-src-min-noconflict.js"></script>
+<script src="external/ace/theme-chrome.js"></script>
+<script src="external/ace/theme-textmate.js"></script>
+<script src="external/ace/mode-lua.js"></script>
+<script src="js/Console.js"></script>
 <script>
 	var editor =  ace.edit("editor");
 	editor.setTheme("ace/theme/chrome");
 	editor.getSession().setMode("ace/mode/lua");
+
+	var console = Console.create('terminal-container');
+
+
 </script>
 </body>
 </html>
