@@ -38,7 +38,7 @@
 .terminal {
     background-color: #000;
     color: #fff;
-    font-family: courier-new, courier, monospace;
+	font: 14px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
     position: relative;
 }
 
