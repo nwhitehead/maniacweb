@@ -24,7 +24,7 @@ var Console =
 		term.scrollback = 1;
 		term.open(term_elem);
 		term.fit();
-
+		term.cursorHidden = true;
 		term.prompt = function () {
 			term.write(options.prompt);
 		};
