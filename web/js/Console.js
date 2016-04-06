@@ -16,11 +16,12 @@ var Console =
 		} else {
 			options.active = true;
 		}
-		options.banner = options.banner || "\x1b[35;1mWelcome to the console!\x1b[0m\r\n\r\n";
+		options.banner = options.banner || "\x1b[35;1mWelcome to the console!\x1b[0m\n\n";
 
 		var term_elem = document.getElementById(container);
 		var term = new Terminal();
 		term.scrollback = 1;
+		term.convertEol = true;
 		term.open(term_elem);
 		term.fit();
 		term.cursorHidden = true;

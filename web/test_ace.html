@@ -11,12 +11,19 @@
 
 <div class="container">
 	<table class="tbl">
-		<tr class="header"><td colspan="2">Header bar</td></tr>
+		<tr class="header">
+			<td colspan="2">
+				Header bar
+				<a href="#" class="button" id="run">RUN</a>
+			</td>
+		</tr>
 		<tr>
 			<td rowspan="2">
-<div id="editor" class="editor">local inspect = require('inspect')
-local v = {x=5, y={}}
-print(inspect(v))
+<div id="editor" class="editor">
+x = 100
+y = {a=3, b={}}
+y.b[#y.b + 1] = 100
+print(y.b[1])
 </div>
 			</td>
 			<td>
@@ -40,14 +47,15 @@ print(inspect(v))
 <script src="external/ace/mode-lua.js"></script>
 
 <script src="external/babel/babel-core-5.8.34-browser.min.js"></script>
+
+<script src="js/Console.js"></script>
+<script src="js/main.js"></script>
+
 <script src="external/starlight/runtime.js"></script>
 <script src="external/starlight/parser.js"></script>
 <!--
 <script src="external/starlight/starlight.js"></script>
 -->
-
-<script src="js/Console.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
