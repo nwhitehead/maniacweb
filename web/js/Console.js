@@ -20,6 +20,7 @@ var Console =
 
 		var term_elem = document.getElementById(container);
 		var term = new Terminal();
+		term.rows = 30;
 		term.scrollback = 1;
 		term.convertEol = true;
 		term.open(term_elem);

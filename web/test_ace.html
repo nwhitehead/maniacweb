@@ -9,37 +9,35 @@
 </head>
 <body>
 
-<div class="container">
-	<table class="tbl">
-		<tr class="header">
-			<td colspan="2">
-				Header bar
-				<a href="#" class="button" id="run">RUN</a>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="2">
-<div id="editor" class="editor">
+<div class="workspace">
+	<div class="header">
+		<div class="padding">
+			Header bar
+			<a href="#" class="button" id="run">RUN</a>
+		</div>
+	</div>
+	<div class="left-pane">
+		<div id="editor" class="editor">
 x = 100
 y = {a=3, b={}}
 y.b[#y.b + 1] = 100
-print(y.b[1])
+print(y.b[1])</div>
+	</div>
+	<div id="resizer" class="resizer"></div>
+	<div class="right-pane">
+		<div class="top-right-area">
+			<canvas id="output" class="output" width=320 height=240></canvas>
+		</div>
+		<div class="bottom-right-area">
+			<div id="terminal-container" class="terminal-container">
+			</div>
+		</div>
+	</div>
 </div>
-			</td>
-			<td>
-				<canvas id="output" class="output" width=640 height=480></canvas>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="terminal-container-container">
-					<div id="terminal-container" class="terminal-container">
-					</div>
-				</div>
-			</td>
-		</tr>
-		<tr class="header"><td colspan="2">Footer bar</td></tr>
-	</table>
+<div class="footer">
+	<div class="padding">
+		Footer bar
+	</div>
 </div>
 
 <script src="external/ace/ace-src-min-noconflict.js"></script>
