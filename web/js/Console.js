@@ -16,7 +16,6 @@ var Console =
 		} else {
 			options.active = true;
 		}
-		options.banner = options.banner || "\x1b[35;1mWelcome to the console!\x1b[0m\n\n";
 
 		var term_elem = document.getElementById(container);
 		var term = new Terminal();
@@ -27,7 +26,6 @@ var Console =
 		term.fit();
 		term.cursorHidden = true;
 		term.active = options.active;
-		term.write(options.banner);
 		return term;
 	}
 
