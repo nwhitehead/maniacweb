@@ -34,10 +34,8 @@ var run = function() {
     var txt = editor.getValue();
     var f;
     try {
+        starlight.parser.parse('require("webbootstrap")')();
         f = starlight.parser.parse(txt);
-        var d = new Date();
-        var timestamp = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-        terminal.write(ansi_purple + "\nRunning code " + ansi_normal + "(" + timestamp + ")" + "\n\n");
         f();
     } catch (e) {
         var msg = e.toString();
@@ -51,6 +49,7 @@ var editor =  ace.edit("editor");
 editor.setTheme("ace/theme/twilight");
 editor.getSession().setMode("ace/mode/lua");
 editor.setShowPrintMargin(false);
+editor.setFontSize(14);
 
 editor.commands.addCommand({
     name: 'run',
