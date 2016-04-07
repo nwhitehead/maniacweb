@@ -15,16 +15,16 @@ window.starlight = {
     config: {
         env: {
             API_VERSION: 2,
-            terminal: {
-                write: function(msg) {
-                    if (typeof(msg) !== 'string') {
-                        throw new Error('Can only write strings');
-                    }
-                    terminal.write(msg);
+            web: {
+                getTimestamp: function() {
+                    return Date.now();
                 },
             },
-            getTimestamp: function() {
-                return Date.now();
+        },
+        stdout: {
+            writeln: function () {
+                var args = Array.prototype.splice.call(arguments, 0);
+                terminal.write(args.join('\t') + '\n');
             },
         },
     },
@@ -60,3 +60,5 @@ editor.commands.addCommand({
     },
     readOnly: true
 });
+
+editor.focus();

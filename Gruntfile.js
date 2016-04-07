@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		starlight: {
 			test: {
 				src: 'modules/**/*.lua',
-				dest: 'dist/test.lua.js',
+				dest: 'web/dist/test.lua.js',
 				options: {
 					main: 'blank',
 					basePath: 'modules'
@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 				compact: false
 			},
 			test: {
-				src: 'dist/test.lua.js',
-				dest: 'dist/test.lua.js',
+				src: 'web/dist/test.lua.js',
+				dest: 'web/dist/test.lua.js',
 			}
 		}
 	});
