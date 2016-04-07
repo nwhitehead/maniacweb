@@ -51,3 +51,12 @@ var editor =  ace.edit("editor");
 editor.setTheme("ace/theme/twilight");
 editor.getSession().setMode("ace/mode/lua");
 editor.setShowPrintMargin(false);
+
+editor.commands.addCommand({
+    name: 'run',
+    bindKey: {win: 'Ctrl-Enter', mac: 'Command-Enter'},
+    exec: function(editor) {
+        run();
+    },
+    readOnly: true
+});
