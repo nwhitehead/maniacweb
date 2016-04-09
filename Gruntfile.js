@@ -27,8 +27,8 @@ module.exports = function(grunt) {
                 alias: {
                     'OutputConsole': './web/js/OutputConsole.js',
                     'Terminal': './web/external/xterm.js/xterm.js',
-                    'Terminal-Fit': './web/external/xterm.js/fit.js'
-                    //~ 'Starlight-Runtime': './web/external/starlight/runtime.js',
+                    'Terminal-Fit': './web/external/xterm.js/fit.js',
+                    'Starlight-Runtime': './web/external/starlight/runtime.js',
                     //~ 'Starlight-Parser': './web/external/starlight/parser.js'
                 }
             },

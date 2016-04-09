@@ -1,5 +1,4 @@
 
-var assert = require('assert');
 var Console = require('OutputConsole');
 
 var ansi_normal = "\x1b[0m";
@@ -32,6 +31,7 @@ window.starlight = {
         },
     },
 };
+
 
 var run = function() {
     var txt = editor.getValue();
