@@ -25,13 +25,16 @@ module.exports = function(grunt) {
             options: {
                 banner: "// ManiacWebSDK Copyright 2016 Nathan Whitehead\n",
                 alias: {
-                    'Terminal': "./web/external/xterm.js/xterm.js",
-                    'Terminal-Fit': "./web/external/xterm.js/fit.js"
+                    'OutputConsole': './web/js/OutputConsole.js',
+                    'Terminal': './web/external/xterm.js/xterm.js',
+                    'Terminal-Fit': './web/external/xterm.js/fit.js'
+                    //~ 'Starlight-Runtime': './web/external/starlight/runtime.js',
+                    //~ 'Starlight-Parser': './web/external/starlight/parser.js'
                 }
             },
             test: {
                 src: [
-                    'web/js/**/*.js',
+                    'web/js/main.js',
                 ],
                 dest: 'web/dist/main_bundle.js'
             }

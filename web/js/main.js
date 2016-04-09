@@ -1,6 +1,6 @@
 
 var assert = require('assert');
-var Console = require('./OutputConsole');
+var Console = require('OutputConsole');
 
 var ansi_normal = "\x1b[0m";
 var ansi_purple = "\x1b[35m";

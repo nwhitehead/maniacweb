@@ -1,9 +1,6 @@
 "use strict"
 
-var assert = require('assert');
 var Terminal = require('Terminal-Fit')(require('Terminal'));
-
-assert.ok(document, 'In the browser');
 
 var Console = {};
 
