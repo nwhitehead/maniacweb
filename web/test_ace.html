@@ -4,8 +4,6 @@
 <title>Editor Test</title>
 <link rel="stylesheet" href="external/xterm.js/xterm.css" media="screen" />
 <link rel="stylesheet" href="css/main.css" media="screen" />
-<script src="external/xterm.js/xterm.js"></script>
-<script src="external/xterm.js/fit.js"></script>
 </head>
 <body>
 
@@ -17,10 +15,7 @@
         </div>
     </div>
     <div class="left-pane">
-        <div id="editor" class="editor">
--- Put your Lua code here
-
-</div>
+        <div id="editor" class="editor"></div>
     </div>
     <div id="resizer" class="resizer"></div>
     <div class="right-pane">
@@ -38,6 +33,9 @@
         Footer bar
     </div>
 </div>
+
+<script src="external/xterm.js/xterm.js"></script>
+<script src="external/xterm.js/fit.js"></script>
 
 <script src="external/ace/ace-src-min-noconflict.js"></script>
 <script src="external/ace/theme-twilight.js"></script>
