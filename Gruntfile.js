@@ -20,11 +20,27 @@ module.exports = function(grunt) {
 				src: 'web/dist/test.lua.js',
 				dest: 'web/dist/test.lua.js',
 			}
-		}
+		},
+        browserify: {
+            options: {
+                banner: "// ManiacWebSDK Copyright 2016 Nathan Whitehead\n",
+                alias: {
+                    'Terminal': "./web/external/xterm.js/xterm.js",
+                    'Terminal-Fit': "./web/external/xterm.js/fit.js"
+                }
+            },
+            test: {
+                src: [
+                    'web/js/**/*.js',
+                ],
+                dest: 'web/dist/main_bundle.js'
+            }
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-starlight');
 	grunt.loadNpmTasks('grunt-babel');
+	grunt.loadNpmTasks('grunt-browserify');
 
 	// Default task.
 	grunt.registerTask('default', ['starlight:test', 'babel:test']);

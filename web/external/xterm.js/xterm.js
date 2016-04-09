@@ -1,5 +1,6 @@
 /**
  * xterm.js: xterm, in the browser
+ * Copyright (c) 2016, Nathan Whitehead (MIT License)
  * Copyright (c) 2014, sourceLair Limited (www.sourcelair.com (MIT License)
  * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
  * https://github.com/chjj/term.js
@@ -31,20 +32,6 @@
  *   other features.
  */
 
-(function (xterm) {
-    if (typeof define == 'function') {
-        /*
-         * Require.js is available
-         */
-        define([], xterm.bind(window));
-    } else {
-        /*
-         * Plain browser environment
-         */
-        this.Xterm = xterm.call(this);
-        this.Terminal = this.Xterm; /* Backwards compatibility with term.js */
-    }
-})(function() {
     /**
      * Terminal Emulation References:
      *   http://vt100.net/
@@ -57,12 +44,6 @@
      */
 
     'use strict';
-
-    /**
-     * Shared
-     */
-
-    var window = this, document = this.document;
 
     /**
      * EventEmitter
@@ -4789,5 +4770,4 @@
     Terminal.off = off;
     Terminal.cancel = cancel;
 
-    return Terminal;
-});
+module.exports = Terminal;
