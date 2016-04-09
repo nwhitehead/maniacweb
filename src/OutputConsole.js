@@ -1,6 +1,6 @@
 "use strict"
 
-var Terminal = require('Terminal-Fit')(require('Terminal'));
+var Terminal = require('vendor/xterm.js/fit.js')(require('vendor/xterm.js/xterm.js'));
 
 var Console = {};
 

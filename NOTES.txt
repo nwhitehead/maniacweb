@@ -10,3 +10,16 @@ Then open browser to localhost:8000 or whatever.
 --
 starlight js file must be named "starlight.js" because of script DOM
 check, that's why it's in a directory with the full name I wanted to use.
+
+
+IDEA:
+maniac-web is a Node module (but really for browser)
+do some build steps, get out "maniac-web/dist/*"
+which includes single js file and a CSS file to include.
+
+browserify
+    generates one final js file
+browserify-css
+    loads all css into the main JS file, avoids different directories
+browserify-shim
+    lets us shim out windows globals like ace

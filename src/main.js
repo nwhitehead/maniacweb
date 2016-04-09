@@ -1,5 +1,12 @@
 
-var Console = require('OutputConsole');
+var Console = require('./OutputConsole');
+
+require('./main.css');
+require('vendor/xterm.js/xterm.css');
+
+var ace = require('ace');
+require('vendor/ace/theme-twilight.js');
+require('vendor/ace/mode-lua.js');
 
 var ansi_normal = "\x1b[0m";
 var ansi_purple = "\x1b[35m";
@@ -32,6 +39,10 @@ window.starlight = {
     },
 };
 
+window.babel = require('babel');
+require('starlight');
+
+require('engine');
 
 var run = function() {
     var txt = editor.getValue();
@@ -68,3 +79,7 @@ editor.commands.addCommand({
 });
 
 editor.focus();
+
+module.exports = {
+    babel: babel
+};

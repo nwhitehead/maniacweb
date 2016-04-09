@@ -7,13 +7,29 @@
         "type": "git",
         "url": "https://github.com/nwhitehead/maniacweb"
     },
-    "dependencies": {
+    "devDependencies": {
+        "babel": "5.4.7",
         "grunt": "0.4.5",
         "grunt-babel": "6.0.0",
         "grunt-starlight": "0.1.8",
-        "grunt-browserify": "5.0.0",
         "babel-plugin-transform-es2015-destructuring": "6.6.5",
-        "browserify": "13.0.0"
+        "browserify": "13.0.0",
+        "browserify-shim": "3.8.12",
+        "browserify-css": "0.9.1",
+        "watchify": "3.7.0"
     },
+    "browser": {
+        "ace": "./vendor/ace/ace-src-min-noconflict.js",
+        "starlight": "./vendor/starlight/starlight.js",
+        "engine": "./web/dist/engine.lua.js"
+    },
+    "browserify": {
+        "transform": [ "browserify-shim", "browserify-css" ]
+    },
+    "browserify-shim": {
+        "ace": "ace",
+        "starlight": "starlight"
+    },
+    "main": "main.js",
     "license": "MIT"
 }

@@ -11,3 +11,14 @@ Technology:
 * ACE editor for interactive editing
 
 Inspired by Love and Processing.
+
+## Build
+
+Requires `node` which includes `npm`.
+
+Do `npm install` to get dependencies installed locally.
+
+Do `grunt` to build single JS file with converted Lua engine files.
+Appears in `web/dist/engine.lua.js`.
+
+Next make the main editor app with `browserify src/main.js > web/dist/main.js`.
